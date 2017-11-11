@@ -20,7 +20,7 @@ def getscore(name, index):
     return total
 
 
-fn = "names.txt"
+fn = "../names.txt"
 data = open(fn).read()
 
 names = data.split(",")

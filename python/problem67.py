@@ -6,7 +6,7 @@ Problem 67 from Project Euler
 Find the maximum total from top to bottom in triangle.txt, a 15K text file containing a triangle with one-hundred rows.
 """
 
-ts = open("triangle.txt").read()
+ts = open("../triangle.txt").read()
 
 t = []
 for l in ts.splitlines():
