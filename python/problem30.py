@@ -27,6 +27,6 @@ def applypow(l):
 for i in xrange(2, int("9"*(powlen+1))):
     if i == sum(applypow(splitb10(i))):
         fpl.append(i)
-        
+
 print fpl
 print sum(fpl)

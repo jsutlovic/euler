@@ -14,7 +14,7 @@ What is the sum of the digits of the number 21000?
 #for digit in s:
     #digit = int(digit)
     #total += digit
-    
+
 #print(total)
 
 #Condensed version

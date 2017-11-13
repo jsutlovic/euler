@@ -15,7 +15,7 @@ ndiv = 500
     #"""
     #Return a list of factors for number n
     #"""
-    
+
     #f = []
 
     #for i in range(1, int(round(sqrt(n)))+1):
@@ -29,14 +29,14 @@ def factor(n):
     """
     Return the number of factors for n
     """
-    
+
     f = 0
     lim = int(sqrt(n))
-    
+
     for i in range(1, lim):
         if n%i == 0:
             f += 2
-    
+
     return f
 
 

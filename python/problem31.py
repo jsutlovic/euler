@@ -22,14 +22,14 @@ def splitlower(x):
         else:
             l = [j]*2+[v[i+2]]
         return l
-    
+
 def reduceval(x):
     if x == 1: return 0
     steps = 1
-    
+
     for i in splitlower(x):
         steps += reduceval(i)
-        
+
     return steps
 
 

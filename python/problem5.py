@@ -20,14 +20,14 @@ ldl = range(1, n+1)
 def factor(n):
     f = []
     i = 1
-    
+
     while True:
         if i > sqrt(n): break
         if n % i == 0: f.append(i)
         i += 1
-        
+
     return f
-        
+
 def test(n, total):
     divall = False
     divs = range(1, n+1)
@@ -37,7 +37,7 @@ def test(n, total):
             break
         else:
             divall = True
-            
+
     return divall
 
 
@@ -48,7 +48,7 @@ def test(n, total):
                 #if slf == slf2:
                     #print "Yep", lf, slf, lf2, slf2
                     #ldl.pop(ldl.index(lf2))
-        
+
 #print ldl
 
 #total = 1
@@ -56,7 +56,7 @@ def test(n, total):
     #total *= i
 
 #print total
-    
+
 
 total = 1
 for t in ldl:

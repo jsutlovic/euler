@@ -18,5 +18,5 @@ for i in range(n, 0, -1):
         if s == "".join(reversed(s)):
             if i*j > palin:
                 palin = i*j
-                
+
 print palin

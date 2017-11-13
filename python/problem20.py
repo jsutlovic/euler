@@ -14,11 +14,11 @@ def factorial(n):
     for i in range(n-1, 0, -1):
         total *= i
     return total
-    
+
 digits = str(factorial(n))
 
 total = 0
 for digit in digits:
     total += int(digit)
-    
+
 print total

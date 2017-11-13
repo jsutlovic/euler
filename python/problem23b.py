@@ -6,7 +6,7 @@ def findFactors(n):
     """
     Return a list of factors for number n
     """
-    
+
     f = []
 
     for i in xrange(1, int(round(sqrt(n)))+1):
@@ -28,7 +28,7 @@ def isAbundant(x):
     l.remove(x)
     if listSum(l) > x: return True
     return False
-    
+
 
 def listSum(l):
     t = 0

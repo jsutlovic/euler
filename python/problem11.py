@@ -36,7 +36,7 @@ for nrow in snum.split("\n"):
     for num in nrow.split():
         row.append(num)
     numbers.append(row)
-    
+
 #print numbers
 
 def findvlines(numbers):
@@ -47,7 +47,7 @@ def findvlines(numbers):
     ll = 4
     #All the found vertical lines
     vlines = []
-    
+
     #Shift in the column, account for the length of the line
     for yshift in range(len(numbers)-(ll-1)):
         #Shift in the row
@@ -58,7 +58,7 @@ def findvlines(numbers):
             for lineshift in range(ll):
                 line.append(numbers[yshift+lineshift][xshift])
             vlines.append(line)
-            
+
     return vlines
 
 
@@ -66,12 +66,12 @@ def findhlines(numbers):
     """
     Find all the horizontal lines of 4 numbers
     """
-    
+
     #Line length = 4
     ll = 4
     #All the found horizontal lines
     hlines = []
-    
+
     #Shift in the column
     for yshift in range(len(numbers)):
         #Shift in the row, accound for the length of the line
@@ -82,18 +82,18 @@ def findhlines(numbers):
             for lineshift in range(ll):
                 line.append(numbers[yshift][xshift+lineshift])
             hlines.append(line)
-            
+
     return hlines
-            
+
 
 def findddlines(numbers):
     """
     Find all the diagonal lines of 4 numbers pointing downwards (left to right)
     """
-    
+
     ll = 4
     ddlines = []
-    
+
     #Account for y and x line length
     for yshift in range(len(numbers)-(ll-1)):
         for xshift in range(len(numbers)-(ll-1)):
@@ -101,18 +101,18 @@ def findddlines(numbers):
             for lineyshift, linexshift in zip(range(ll),range(ll)):
                 line.append(numbers[yshift+lineyshift][xshift+linexshift])
             ddlines.append(line)
-            
+
     return ddlines
-    
+
 
 def finddulines(numbers):
     """
     Find all the diagonal lines of 4 numbers pointing upwards (left to right)
     """
-    
+
     ll = 4
     dulines = []
-    
+
     #Account for x and y line length, starting shifted the opposite way
     for yshift in range((ll-1), len(numbers)):
         for xshift in range(len(numbers[yshift])-(ll-1)):
@@ -120,7 +120,7 @@ def finddulines(numbers):
             for lineyshift, linexshift in zip(range(ll), range(ll)):
                 line.append(numbers[yshift-lineyshift][xshift+linexshift])
             dulines.append(line)
-            
+
     return dulines
 
 
@@ -128,19 +128,19 @@ def getbiggest(numbers, lines):
     """
     Find the largest product of the items in a line
     """
-    
+
     biggest = 0
     bl = []
-    
+
     for line in lines(numbers):
         tbig = 1
         for num in line:
             tbig *= int(num)
-            
+
         if tbig > biggest:
             biggest = tbig
             bl = line
-    
+
     print(bl, biggest)
     return biggest
 

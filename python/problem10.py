@@ -8,7 +8,7 @@ Find the sum of all the primes below two million.
 
 n = 2000000
 
-def primes(n): 
+def primes(n):
     if n==2: return [2]
     elif n<2: return []
     s=list(range(3,n+1,2))
@@ -31,5 +31,5 @@ def primes(n):
 total = 0
 for i in primes(n):
     total += i
-    
+
 print(total)

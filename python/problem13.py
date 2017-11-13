@@ -12,5 +12,5 @@ numlist = numbers.split("\n")
 total = 0
 for i in numlist:
     total += int(i)
-    
+
 print(str(total)[:10])

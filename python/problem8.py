@@ -15,7 +15,7 @@ def sumdigits(digits):
     total = 1
     for digit in digits:
         total *= int(digit)
-        
+
     return total
 
 for shift in range(len(number)-ndigits-1):

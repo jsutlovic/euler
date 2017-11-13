@@ -15,9 +15,9 @@ def fib(n):
         for i in range(1, n-1):
             fa = f[i] + f[i-1]
             f.append(fa)
-            
+
         return f
-        
+
 def fibnum(n):
     """
     Fibonnaci number for sequence n
@@ -33,9 +33,9 @@ for i in range(10, 50):
         fibmax = i
     else:
         break
-    
+
 for j in fib(fibmax):
     if j % 2 == 0:
         fibt += j
-        
+
 print fibt

@@ -16,15 +16,15 @@ def fib(n):
             fa = f[0] + f[1]
             f.append(fa)
             f.pop(0)
-            
+
         return f
-        
+
 def fibnum(n):
     """
     Fibonnaci number for sequence n
     """
     return fib(n)[-1]
-    
+
 
 i = 2
 while True:
@@ -32,6 +32,6 @@ while True:
     if len(str(f)) >= 1000: break
     i += 1
     #print f
-    
+
 print i
 

@@ -14,7 +14,7 @@ def factor(n):
     """
     Return a list of factors for number n
     """
-    
+
     f = []
 
     for i in xrange(1, int(round(sqrt(n)))+1):

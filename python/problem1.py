@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.5 
+#!/usr/bin/env python2.5
 
 """
 Problem 1 from Project Euler
@@ -13,5 +13,5 @@ for i in range(1000):
     if i % 3 == 0 or i % 5 == 0:
         total += i
 
-    
+
 print total

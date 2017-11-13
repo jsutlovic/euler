@@ -15,12 +15,12 @@ pfact = []
 def factors(n):
     f = []
     i = 1
-    
+
     while True:
         if i > int(round(sqrt(n))): break
         if n % i == 0: f.append(i)
         i += 1
-        
+
     return f
 
 #print "Possible Prime Factors:", factors(n)
@@ -37,5 +37,5 @@ for i in reversed(f):
         print i
         break
 ##        pfact.append(i)
-##        
+##
 ##print pfact[-1]
