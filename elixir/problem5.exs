@@ -12,7 +12,7 @@ n = 20
 
 defmodule Euler5 do
   def smallest_common_multiple(n) do
-    Range.new(n, 1)
+    n..1
     |> Enum.reduce(&Euler5.product/2)
     |> Euler5.divide_all_factors(n, n)
   end

@@ -22,4 +22,3 @@ defmodule Euler3 do
 end
 
 IO.inspect(Euler3.largest_prime_factor(600851475143))
-
