@@ -5,7 +5,7 @@
 # from the product of two 2-digit numbers is 9009 = 91 × 99.
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-defmodule Euler do
+defmodule Euler4 do
   def largest_palindrome(digit_count) do
     Enum.max(filter_palindromes(digit_count))
   end
@@ -13,7 +13,7 @@ defmodule Euler do
   def filter_palindromes(digit_count) do
     zipdigits(digit_count)
     |> Stream.map(fn({a, b}) -> a * b end)
-    |> Stream.filter(&Euler.check_palindrome/1)
+    |> Stream.filter(&Euler4.check_palindrome/1)
   end
 
   def check_pair(pair) do
@@ -57,4 +57,4 @@ defmodule Euler do
   end
 end
 
-IO.inspect(Euler.largest_palindrome(3))
+IO.inspect(Euler4.largest_palindrome(3))

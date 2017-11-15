@@ -30,7 +30,7 @@ def factor(n):
 
 def test(n, total):
     divall = False
-    divs = range(1, n+1)
+    divs = range(1, n)
     for i in divs:
         if not total % i == 0:
             divall = False

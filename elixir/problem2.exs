@@ -7,7 +7,7 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed
 # four million, find the sum of the even-valued terms.
 
-defmodule Euler do
+defmodule Euler2 do
   def fibonacci(0),            do: 1
   def fibonacci(1),            do: 2
   def fibonacci(n) when n > 1, do: fibonacci(n-1) + fibonacci(n-2)
@@ -24,8 +24,8 @@ defmodule Euler do
 end
 
 0..40
-|> Enum.take_every(3) # Even-valued fibonacci values
-|> Enum.map(&Euler.fib/1)
+|> Enum.take_every(3) # Even-valued fibonacci values are every 3rd value
+|> Enum.map(&Euler2.fib/1)
 |> Enum.take_while(fn (n) -> n < 4_000_000 end)
 |> Enum.sum()
 |> IO.puts()
