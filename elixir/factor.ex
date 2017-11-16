@@ -1,4 +1,8 @@
 defmodule Factor do
+  def prime_filter(n) do
+    length(factorize(n)) > 0
+  end
+
   def factorize(n) when n > 1 do
     divisor(n, 2, [])
   end

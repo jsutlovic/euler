@@ -10,14 +10,10 @@ defmodule Euler3 do
   def largest_prime_factor(n) do
     n
     |> Factor.factorize()
-    |> Enum.reject(&Euler3.prime_filter/1)
+    |> Enum.reject(&Factor.prime_filter/1)
     |> Enum.sort()
     |> Enum.reverse()
     |> hd
-  end
-
-  def prime_filter(n) do
-    length(factorize(n)) > 0
   end
 end
 

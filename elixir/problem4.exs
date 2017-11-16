@@ -46,6 +46,7 @@ defmodule Euler4 do
   end
 
   def reverse_num(n) do
+    # TODO: Could also use Enum.reverse(Integer.digits(n)) here
     concat_digits(reverse_num_arr(n))
   end
 
